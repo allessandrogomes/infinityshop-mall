@@ -2,7 +2,7 @@ import styled from "styled-components"
 import ItemCategoria from "./ItemCategoria"
 
 const Container = styled.div`
-    margin: 40px 20px 0 135px;
+    padding: 40px 20px 0 0;
     width: 217px;
     display: flex;
     flex-direction: column;

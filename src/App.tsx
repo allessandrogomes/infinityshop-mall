@@ -13,6 +13,7 @@ import { Divider } from '@mui/material';
 import Main from './components/Main';
 import Categorias from './components/Main/Categorias';
 import CarroselPrincipal from './components/Main/CarrosselPrincipal';
+import SessaoToday from './components/Main/SessaoToday';
 
 const ContainerApp = styled.div`
   width: 100vw;
@@ -22,6 +23,7 @@ const ContainerApp = styled.div`
 
 const SessaoCategoriasECarrosel = styled.section`
   display: flex;
+  margin-left: 135px;
 `
 
 function App() {
@@ -32,14 +34,15 @@ function App() {
       <Header>
         <CabecalhoTopo />
         <CabecalhoPrincipal />
-        <Divider />
+        <Divider sx={{backgroundColor: '#000', opacity: '0.15'}}/>
       </Header>
       <Main>
         <SessaoCategoriasECarrosel>
           <Categorias />
-          <Divider orientation='vertical' flexItem/>
+          <Divider sx={{backgroundColor: '#000', opacity: '0.15'}} orientation='vertical' flexItem />
           <CarroselPrincipal />
         </SessaoCategoriasECarrosel>
+        <SessaoToday />
       </Main>
     </ContainerApp>
   )
