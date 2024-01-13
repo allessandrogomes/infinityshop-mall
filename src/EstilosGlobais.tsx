@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Inter';
         src: url('/fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
     }
+
+    body {
+        overflow-x: hidden;
+    }
 `;
 
 export default GlobalStyles

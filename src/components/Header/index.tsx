@@ -6,7 +6,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({children}) => {
     return (
-        <header>{children}</header>
+        <header style={{width: '100%'}}>{children}</header>
     )
 }
 

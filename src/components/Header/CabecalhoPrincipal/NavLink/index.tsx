@@ -6,6 +6,10 @@ const Link = styled.a`
     font-weight: 400;
     color: #000;
     text-decoration: none;
+
+    &:hover {
+        color: #DB4444;
+    }
 `
 
 interface NavLinkProps {

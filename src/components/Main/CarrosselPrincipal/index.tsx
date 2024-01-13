@@ -10,7 +10,7 @@ function CarrosselPrincipal() {
     };
 
     return (
-        <Carousel style={{width: '892px', margin: '40px 0 0 40px'}} activeIndex={index} onSelect={handleSelect}>
+        <Carousel style={{width: '892px', marginTop: '40px'}} activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
             <ImagemCarrossel imagem='/images/carrossel-imagem-1.svg'/>
             </Carousel.Item>

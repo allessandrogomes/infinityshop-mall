@@ -5,6 +5,7 @@ const Texto = styled.h6`
     font-weight: 400;
     font-size: 0.875rem;
     color: #FAFAFA;
+    margin: 0;
 `
 
 interface TextoProps {

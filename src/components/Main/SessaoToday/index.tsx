@@ -3,24 +3,29 @@ import TituloESubtituloSessao from "../TituloESubtituloSessao"
 import Cronometro from "./Cronometro"
 import SetasSessao from "../SetasSessao"
 import CardProduto from "../CardProduto"
+import BtnVerTodosProdutos from "../BtnVerTodosProdutos"
+import { Divider } from "@mui/material"
 
 
-const Sessao = styled.section`
+export const Sessao = styled.section`
     display: flex;
     flex-direction: column;
-    margin: 135px 0 0 135px;
-    width: 80%;
+    width: max-content;
+    max-width: 80vw;
     gap: 40px;
 `
 
-const Cabecalho = styled.div`
+export const Cabecalho = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: end;
 `
 
 const Produtos = styled.div`
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 `
 
@@ -70,6 +75,8 @@ const SessaoToday = () => {
                     quantidadeAvaliacoes={88}
                 />
             </Produtos>
+            <BtnVerTodosProdutos />
+            <Divider sx={{ backgroundColor: '#000', opacity: '0.15', marginTop: '50px' }} />
         </Sessao>
     )
 }

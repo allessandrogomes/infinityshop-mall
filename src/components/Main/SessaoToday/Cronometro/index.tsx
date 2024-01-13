@@ -5,8 +5,6 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
-    position: relative;
-    right: 20%;
 
     div {
         display: flex;

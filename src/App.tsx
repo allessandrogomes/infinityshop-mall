@@ -14,16 +14,20 @@ import Main from './components/Main';
 import Categorias from './components/Main/Categorias';
 import CarroselPrincipal from './components/Main/CarrosselPrincipal';
 import SessaoToday from './components/Main/SessaoToday';
+import SessaoCategories from './components/Main/SessaoCategories';
 
 const ContainerApp = styled.div`
   width: 100vw;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #FFF;
 `
 
 const SessaoCategoriasECarrosel = styled.section`
+  width: max-content;
   display: flex;
-  margin-left: 135px;
 `
 
 function App() {
@@ -34,15 +38,16 @@ function App() {
       <Header>
         <CabecalhoTopo />
         <CabecalhoPrincipal />
-        <Divider sx={{backgroundColor: '#000', opacity: '0.15'}}/>
+        <Divider sx={{ backgroundColor: '#000', opacity: '0.15' }} />
       </Header>
       <Main>
         <SessaoCategoriasECarrosel>
           <Categorias />
-          <Divider sx={{backgroundColor: '#000', opacity: '0.15'}} orientation='vertical' flexItem />
+          <Divider sx={{ backgroundColor: '#000', opacity: '0.15', marginRight: '50px' }} orientation='vertical' flexItem />
           <CarroselPrincipal />
         </SessaoCategoriasECarrosel>
         <SessaoToday />
+        <SessaoCategories />
       </Main>
     </ContainerApp>
   )

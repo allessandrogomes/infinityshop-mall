@@ -6,6 +6,10 @@ const Item = styled.a`
     font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
+
+    &:hover {
+        color: #DB4444;
+    }
 `
 
 interface ItemCategoriaProps {
