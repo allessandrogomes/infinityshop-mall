@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import { Cabecalho, Sessao } from "../SessaoToday"
-import SetasSessao from "../SetasSessao"
-import TituloESubtituloSessao from "../TituloESubtituloSessao"
+import Sessao from "../../shared/Containers/ContainerSessao";
+import Cabecalho from "../../shared/Containers/ContainerCabecalhoSessao";
+import TituloESubtituloSessao from "../../shared/Containers/ContainerCabecalhoSessao/TituloESubtituloSessao";
+import Categorias from "../../shared/Containers/ContainerProdutosSessao";
 import CardCategoria from "./CardCategoria"
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import DesktopWindowsOutlinedIcon from '@mui/icons-material/DesktopWindowsOutlined';
@@ -10,14 +10,8 @@ import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
 import { Divider } from "@mui/material"
+import SetasSessao from "../../shared/Buttons/SetasSessao";
 
-const Categorias = styled.div`
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-`
 
 const SessaoCategories = () => {
     return (

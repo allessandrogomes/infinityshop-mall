@@ -13,9 +13,15 @@ const Btn = styled.button`
     margin: 50px auto 0 auto;
 `
 
-const BtnVerTodosProdutos = () => {
+interface BtnVerTodosProdutosProps {
+    style?: any
+    texto: string
+}
+
+
+const BtnVerTodosProdutos = ({style, texto}: BtnVerTodosProdutosProps) => {
     return (
-        <Btn>View All Products</Btn>
+        <Btn style={style}>{texto}</Btn>
     )
 }
 

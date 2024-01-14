@@ -7,6 +7,8 @@ const BotaoAdicionarAoCarrinho = styled.button`
     padding: 0;
     margin: 0;
     width: 100%;
+    height: 100%;
+    border: none;
     border-radius: 0px 0px 4px 4px;
     background-color: #000;
     color: #FFF;
@@ -32,7 +34,7 @@ const Card = styled.div`
 `
 
 const BlocoImagem = styled.div`
-    height: 270px;
+    height: 250px;
     background-color: #F5F5F5;
     display: flex;
     justify-content: center;
@@ -40,10 +42,20 @@ const BlocoImagem = styled.div`
     flex-direction: column;
 
     img {
-        max-width: 80%;
-        position: relative;
-        bottom: 30px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
+`
+
+const DivImagem = styled.div`
+    width: 60%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
 `
 
 const DivDesconto = styled.div`
@@ -92,7 +104,7 @@ const DivPrecos = styled.div`
     gap: 12px;
 `
 
-const PrecoAtual = styled.span`
+const Preco = styled.span`
     font-family: 'Poppins';
     font-size: 1rem;
     font-weight: 500;
@@ -124,27 +136,29 @@ const QuantidadeDeAvaliacoes = styled.span`
 
 const DivBotaoAdicionarAoCarrinho = styled.div`
     width: 100%;
-    height: 20px;
+    height: 40px;
 `
 
 interface CardProdutoProps {
-    desconto: number
+    desconto?: number
     imagem: string
     nome: string
-    precoAtual: number
-    precoAnterior: number
+    preco: number
+    precoAnterior?: number
     avaliacao: number
     quantidadeAvaliacoes: number
 }
 
-const CardProduto = ({ desconto, imagem, nome, precoAtual, precoAnterior, avaliacao, quantidadeAvaliacoes }: CardProdutoProps) => {
+const CardProduto = ({ desconto = 0, imagem, nome, preco, precoAnterior = 0, avaliacao, quantidadeAvaliacoes }: CardProdutoProps) => {
     return (
         <Card>
             <BlocoImagem>
-                <DivDesconto><span>-{desconto}%</span></DivDesconto>
+                {desconto !== 0 ? <DivDesconto><span>-{desconto}%</span></DivDesconto> : ''}
                 <DivIcone style={{ bottom: '15px' }}><FavoriteBorderIcon sx={{ color: '#000' }} /></DivIcone>
                 <DivIcone><VisibilityOutlinedIcon sx={{ color: '#000' }} /></DivIcone>
-                <img src={imagem} />
+                <DivImagem>
+                    <img src={imagem} />
+                </DivImagem>
                 <DivBotaoAdicionarAoCarrinho>
                     <BotaoAdicionarAoCarrinho>Add To Cart</BotaoAdicionarAoCarrinho>
                 </DivBotaoAdicionarAoCarrinho>
@@ -152,11 +166,11 @@ const CardProduto = ({ desconto, imagem, nome, precoAtual, precoAnterior, avalia
             <BlocoDetalhes>
                 <NomeProduto>{nome}</NomeProduto>
                 <DivPrecos>
-                    <PrecoAtual>${precoAtual}</PrecoAtual>
-                    <PrecoAnterior>${precoAnterior}</PrecoAnterior>
+                    <Preco>${preco}</Preco>
+                    {precoAnterior !== 0 ? <PrecoAnterior>${precoAnterior}</PrecoAnterior> : ''}
                 </DivPrecos>
                 <DivAvaliacao>
-                    <Rating name="read-only" value={avaliacao} readOnly />
+                    <Rating name="read-only" value={avaliacao} precision={0.5} readOnly />
                     <QuantidadeDeAvaliacoes>({quantidadeAvaliacoes})</QuantidadeDeAvaliacoes>
                 </DivAvaliacao>
             </BlocoDetalhes>

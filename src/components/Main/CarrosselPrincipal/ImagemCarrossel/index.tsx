@@ -5,10 +5,9 @@ interface ImagemCarrosselProps {
 }
 
 const Div = styled.div`
-    width: 892px;
+    width: 100%;
     height: 344px;
     background-color: '#000';
-    object-fit: cover;
 `
 
 const Imagem = styled.img`

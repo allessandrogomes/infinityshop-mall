@@ -1,33 +1,12 @@
-import styled from "styled-components"
-import TituloESubtituloSessao from "../TituloESubtituloSessao"
+import Sessao from "../../shared/Containers/ContainerSessao"
+import Cabecalho from "../../shared/Containers/ContainerCabecalhoSessao"
+import TituloESubtituloSessao from "../../shared/Containers/ContainerCabecalhoSessao/TituloESubtituloSessao"
 import Cronometro from "./Cronometro"
-import SetasSessao from "../SetasSessao"
-import CardProduto from "../CardProduto"
-import BtnVerTodosProdutos from "../BtnVerTodosProdutos"
+import Produtos from "../../shared/Containers/ContainerProdutosSessao"
+import CardProduto from "../../shared/Containers/ContainerProdutosSessao/CardProduto"
 import { Divider } from "@mui/material"
-
-
-export const Sessao = styled.section`
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    max-width: 80vw;
-    gap: 40px;
-`
-
-export const Cabecalho = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-`
-
-const Produtos = styled.div`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-`
+import SetasSessao from "../../shared/Buttons/SetasSessao"
+import BtnVerTodosProdutos from "../../shared/Buttons/BtnVerTodosProdutos"
 
 const SessaoToday = () => {
     return (
@@ -42,40 +21,40 @@ const SessaoToday = () => {
                     desconto={40} 
                     imagem="/images/produtos/controle-video-game.svg"
                     nome="HAVIT HV-G92 Gamepad"
-                    precoAtual={120}
+                    preco={120}
                     precoAnterior={160}
                     avaliacao={5}
                     quantidadeAvaliacoes={88}
                 />
                 <CardProduto 
-                    desconto={40} 
-                    imagem="/images/produtos/controle-video-game.svg"
-                    nome="HAVIT HV-G92 Gamepad"
-                    precoAtual={120}
-                    precoAnterior={160}
+                    desconto={35} 
+                    imagem="/images/produtos/teclado-gamer.svg"
+                    nome="AK-900 Wired Keyboard"
+                    preco={960}
+                    precoAnterior={1160}
+                    avaliacao={4}
+                    quantidadeAvaliacoes={76}
+                />
+                <CardProduto 
+                    desconto={30} 
+                    imagem="/images/produtos/monitor-gamer.svg"
+                    nome="IPS LCD Gaming Monitor"
+                    preco={370}
+                    precoAnterior={400}
                     avaliacao={5}
-                    quantidadeAvaliacoes={88}
+                    quantidadeAvaliacoes={99}
                 />
                 <CardProduto 
                     desconto={40} 
-                    imagem="/images/produtos/controle-video-game.svg"
-                    nome="HAVIT HV-G92 Gamepad"
-                    precoAtual={120}
-                    precoAnterior={160}
-                    avaliacao={5}
-                    quantidadeAvaliacoes={88}
-                />
-                <CardProduto 
-                    desconto={40} 
-                    imagem="/images/produtos/controle-video-game.svg"
-                    nome="HAVIT HV-G92 Gamepad"
-                    precoAtual={120}
-                    precoAnterior={160}
-                    avaliacao={5}
-                    quantidadeAvaliacoes={88}
+                    imagem="/images/produtos/poltrona.svg"
+                    nome="S-Series Comfort Chair "
+                    preco={375}
+                    precoAnterior={400}
+                    avaliacao={4.5}
+                    quantidadeAvaliacoes={99}
                 />
             </Produtos>
-            <BtnVerTodosProdutos />
+            <BtnVerTodosProdutos texto="View All Products"/>
             <Divider sx={{ backgroundColor: '#000', opacity: '0.15', marginTop: '50px' }} />
         </Sessao>
     )

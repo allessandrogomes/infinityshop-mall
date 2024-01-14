@@ -15,6 +15,8 @@ import Categorias from './components/Main/Categorias';
 import CarroselPrincipal from './components/Main/CarrosselPrincipal';
 import SessaoToday from './components/Main/SessaoToday';
 import SessaoCategories from './components/Main/SessaoCategories';
+import SessaoThisMonth from './components/Main/SessaoThisMonth';
+import BannerDestaque from './components/Main/BannerDestaque';
 
 const ContainerApp = styled.div`
   width: 100vw;
@@ -26,8 +28,9 @@ const ContainerApp = styled.div`
 `
 
 const SessaoCategoriasECarrosel = styled.section`
-  width: max-content;
+  width: 100vw;
   display: flex;
+  justify-content: center;
 `
 
 function App() {
@@ -48,6 +51,8 @@ function App() {
         </SessaoCategoriasECarrosel>
         <SessaoToday />
         <SessaoCategories />
+        <SessaoThisMonth />
+        <BannerDestaque />
       </Main>
     </ContainerApp>
   )
