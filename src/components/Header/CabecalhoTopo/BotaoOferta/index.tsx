@@ -10,6 +10,7 @@ const Botao = styled.button`
     font-size: 0.875rem;
     color: #FAFAFA;
     cursor: pointer;
+    width: max-content;
 `
 
 interface TextoProps {

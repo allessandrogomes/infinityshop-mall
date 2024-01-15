@@ -96,13 +96,19 @@ const EfeitoFundoImagem = styled.div`
     position: absolute;
 `
 
-const BannerDestaque = () => {
+interface BannerDestaqueProps {
+    nomeProduto: string
+    descricaoProduto: string
+    imagemProduto: string
+}
+
+const BannerDestaque = ({ nomeProduto, descricaoProduto, imagemProduto }: BannerDestaqueProps) => {
     return (
         <Sessao>
             <Banner>
                 <DivInformacoes>
-                    <Titulo>Emphasis</Titulo>
-                    <Subtitulo>Enhance Your Music Experience</Subtitulo>
+                    <Titulo>{nomeProduto}</Titulo>
+                    <Subtitulo>{descricaoProduto}</Subtitulo>
                     <DivContagem>
                         <ItemContagem>
                             <span>23</span>
@@ -125,7 +131,7 @@ const BannerDestaque = () => {
                 </DivInformacoes>
                 <DivImagem>
                     <EfeitoFundoImagem />
-                    <img src="/images/produtos/jbl.svg" />
+                    <img src={imagemProduto} />
                 </DivImagem>
             </Banner>
         </Sessao>

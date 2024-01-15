@@ -4,10 +4,8 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import { Rating } from "@mui/material";
 
 const BotaoAdicionarAoCarrinho = styled.button`
-    padding: 0;
-    margin: 0;
     width: 100%;
-    height: 100%;
+    height: 40px;
     border: none;
     border-radius: 0px 0px 4px 4px;
     background-color: #000;
@@ -17,6 +15,8 @@ const BotaoAdicionarAoCarrinho = styled.button`
     font-weight: 500;
     opacity: 0;
     transition: opacity 0.3s ease, height 0.3s ease;
+    position: absolute;
+    bottom: 0%;
 `
 
 const Card = styled.div`
@@ -34,18 +34,13 @@ const Card = styled.div`
 `
 
 const BlocoImagem = styled.div`
+    position: relative;
     height: 250px;
     background-color: #F5F5F5;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
 `
 
 const DivImagem = styled.div`
@@ -54,8 +49,21 @@ const DivImagem = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    bottom: 10px;
+    position: absolute;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+`
+
+const DivTags = styled.div`
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
 `
 
 const DivDesconto = styled.div`
@@ -63,10 +71,25 @@ const DivDesconto = styled.div`
     height: 26px;
     background-color: #DB4444;
     border-radius: 4px;
-    position: relative;
-    top: 10px;
-    right: 95px;
     text-align: center;
+    top: 5%;
+    left: 5%;
+
+    span {
+        font-family: 'Poppins';
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: #FAFAFA;
+    }
+`
+const DivNovoProduto = styled.div`
+    width: 55px;
+    height: 26px;
+    background-color: #0F6;
+    border-radius: 4px;
+    text-align: center;
+    top: 5%;
+    left: 5%;
 
     span {
         font-family: 'Poppins';
@@ -84,8 +107,7 @@ const DivIcone = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: 100px;
+    position: absolute;
     cursor: pointer;
 `
 
@@ -134,13 +156,9 @@ const QuantidadeDeAvaliacoes = styled.span`
     opacity: 0.5;
 `
 
-const DivBotaoAdicionarAoCarrinho = styled.div`
-    width: 100%;
-    height: 40px;
-`
-
 interface CardProdutoProps {
     desconto?: number
+    produtoNovo?: boolean
     imagem: string
     nome: string
     preco: number
@@ -149,19 +167,20 @@ interface CardProdutoProps {
     quantidadeAvaliacoes: number
 }
 
-const CardProduto = ({ desconto = 0, imagem, nome, preco, precoAnterior = 0, avaliacao, quantidadeAvaliacoes }: CardProdutoProps) => {
+const CardProduto = ({ desconto = 0, produtoNovo = false, imagem, nome, preco, precoAnterior = 0, avaliacao, quantidadeAvaliacoes }: CardProdutoProps) => {
     return (
         <Card>
             <BlocoImagem>
-                {desconto !== 0 ? <DivDesconto><span>-{desconto}%</span></DivDesconto> : ''}
-                <DivIcone style={{ bottom: '15px' }}><FavoriteBorderIcon sx={{ color: '#000' }} /></DivIcone>
-                <DivIcone><VisibilityOutlinedIcon sx={{ color: '#000' }} /></DivIcone>
+                <DivTags>
+                    {desconto !== 0 ? <DivDesconto><span>-{desconto}%</span></DivDesconto> : ''}
+                    {produtoNovo === true ? <DivNovoProduto><span>NEW</span></DivNovoProduto> : ''}
+                </DivTags>
+                <DivIcone style={{ top: '5%', right: '5%' }}><FavoriteBorderIcon sx={{ color: '#000' }} /></DivIcone>
+                <DivIcone style={{ top: '25%', right: '5%' }}><VisibilityOutlinedIcon sx={{ color: '#000' }} /></DivIcone>
                 <DivImagem>
                     <img src={imagem} />
                 </DivImagem>
-                <DivBotaoAdicionarAoCarrinho>
-                    <BotaoAdicionarAoCarrinho>Add To Cart</BotaoAdicionarAoCarrinho>
-                </DivBotaoAdicionarAoCarrinho>
+                <BotaoAdicionarAoCarrinho>Add To Cart</BotaoAdicionarAoCarrinho>
             </BlocoImagem>
             <BlocoDetalhes>
                 <NomeProduto>{nome}</NomeProduto>

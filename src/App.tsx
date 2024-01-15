@@ -17,6 +17,8 @@ import SessaoToday from './components/Main/SessaoToday';
 import SessaoCategories from './components/Main/SessaoCategories';
 import SessaoThisMonth from './components/Main/SessaoThisMonth';
 import BannerDestaque from './components/Main/BannerDestaque';
+import SessaoOurProducts from './components/Main/SessaoOurProducts';
+import SessaoFeatured from './components/Main/SessaoFeatured';
 
 const ContainerApp = styled.div`
   width: 100vw;
@@ -52,7 +54,9 @@ function App() {
         <SessaoToday />
         <SessaoCategories />
         <SessaoThisMonth />
-        <BannerDestaque />
+        <BannerDestaque nomeProduto='JBL' descricaoProduto='Enhance Your Music Experience' imagemProduto='/images/produtos/jbl.svg'/>
+        <SessaoOurProducts />
+        <SessaoFeatured />
       </Main>
     </ContainerApp>
   )
