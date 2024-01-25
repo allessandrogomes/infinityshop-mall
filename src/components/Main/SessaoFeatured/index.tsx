@@ -2,7 +2,9 @@ import styled from "styled-components"
 import Cabecalho from "../../shared/Containers/ContainerCabecalhoSessao"
 import TituloESubtituloSessao from "../../shared/Containers/ContainerCabecalhoSessao/TituloESubtituloSessao"
 import Sessao from "../../shared/Containers/ContainerSessao"
-import BotaoOferta from "../../Header/CabecalhoTopo/BotaoOferta"
+import ProdutoPrincipal from "./ProdutoPrincipal"
+import ProdutoSecundario from "./ProdutoSecundario"
+import ProdutoMenor from "./ProdutoMenor"
 
 const Container = styled.div`
     width: 100%;
@@ -15,12 +17,6 @@ const Container = styled.div`
     justify-content: center;
 `
 
-const ProdutoPrincipal = styled.div`
-    width: 570px;
-    height: 100%;
-    position: relative;
-    background-color: #000;
-`
 
 const DivOutrosProdutos = styled.div`
     width: 570px;
@@ -31,52 +27,11 @@ const DivOutrosProdutos = styled.div`
     justify-content: space-between;
 `
 
-const ProdutoSecundario = styled.div`
-    width: 100%;
-    height: 284px;
-    background-color: blue;
-`
-
 const DivProdutosMenores = styled.div`
     display: flex;
     width: 100%;
     height: 284px;
     gap: 30px;
-`
-
-const ProdutoMenorUm = styled.div`
-    width: 270px;
-    height: 284px;
-    background-color: purple;
-`
-
-const ProdutoMenorDois = styled.div`
-    width: 270px;
-    height: 284px;
-    background-color: green;
-`
-
-const DivInformacoes = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: absolute;
-    bottom: 5%;
-    left: 10%;
-`
-
-const Titulo = styled.span`
-    font-family: 'Inter';
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.72px;
-`
-
-const Subtitulo = styled.span`
-    font-family: 'Poppins';
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 21px;
 `
 
 const SessaoFeatured = () => {
@@ -86,22 +41,30 @@ const SessaoFeatured = () => {
                 <TituloESubtituloSessao titulo="Featured" subtitulo="New Arrival" />
             </Cabecalho>
             <Container>
-                <ProdutoPrincipal>
-                    <DivInformacoes>
-                        <Titulo>Playstation 5</Titulo>
-                        <Subtitulo>Black and White version of the PS5 coming out on sale.</Subtitulo>
-                        <BotaoOferta texto="Shop Now" />
-                    </DivInformacoes>
-                </ProdutoPrincipal>
+                <ProdutoPrincipal
+                    imagem="/images/produtos/ps5.svg"
+                    titulo="PlayStation 5"
+                    subtitulo="Black and White version of the PS5 coming out on sale."
+                />
                 <DivOutrosProdutos>
-                    <ProdutoSecundario>
-
-                    </ProdutoSecundario>
+                    <ProdutoSecundario
+                        imagem="/images/produtos/shoes-women.png"
+                        titulo="Women’s Collections"
+                        subtitulo="Featured woman collections that give you another vibe."
+                    />
                     <DivProdutosMenores>
-                        <ProdutoMenorUm></ProdutoMenorUm>
-                        <ProdutoMenorDois></ProdutoMenorDois>
+                        <ProdutoMenor 
+                            imagem="/images/produtos/speakers.svg" 
+                            titulo="Speakers" 
+                            subtitulo="Amazon wireless speakers"
+                        />
+                        <ProdutoMenor 
+                            imagem="/images/produtos/perfume.svg" 
+                            titulo="Perfume" 
+                            subtitulo="GUCCI INTENSE OUD EDP"
+                        />
                     </DivProdutosMenores>
-                </DivOutrosProdutos>    
+                </DivOutrosProdutos>
             </Container>
         </Sessao>
     )

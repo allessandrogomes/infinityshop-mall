@@ -86,7 +86,7 @@ const DivImagem = styled.div`
     }
 `
 
-const EfeitoFundoImagem = styled.div`
+export const EfeitoFundoImagem = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 504px;
