@@ -19,6 +19,14 @@ import SessaoThisMonth from './components/Main/SessaoThisMonth';
 import BannerDestaque from './components/Main/BannerDestaque';
 import SessaoOurProducts from './components/Main/SessaoOurProducts';
 import SessaoFeatured from './components/Main/SessaoFeatured';
+import SessaoVantagens from './components/Main/SessaoVantagens';
+import Footer from './components/Footer';
+import Subscribe from './components/Footer/Subscribe';
+import Support from './components/Footer/Support';
+import Account from './components/Footer/Account';
+import QuickLink from './components/Footer/QuickLink';
+import DownloadApp from './components/Footer/DownloadApp';
+import ContainerItems from './components/Footer/ContainerItems';
 
 const ContainerApp = styled.div`
   width: 100vw;
@@ -54,10 +62,20 @@ function App() {
         <SessaoToday />
         <SessaoCategories />
         <SessaoThisMonth />
-        <BannerDestaque nomeProduto='JBL' descricaoProduto='Enhance Your Music Experience' imagemProduto='/images/produtos/jbl.svg'/>
+        <BannerDestaque nomeProduto='JBL' descricaoProduto='Enhance Your Music Experience' imagemProduto='/images/produtos/jbl.svg' />
         <SessaoOurProducts />
         <SessaoFeatured />
+        <SessaoVantagens />
       </Main>
+      <Footer>
+        <ContainerItems>
+          <Subscribe />
+          <Support />
+          <Account />
+          <QuickLink />
+          <DownloadApp />
+        </ContainerItems>
+      </Footer>
     </ContainerApp>
   )
 }

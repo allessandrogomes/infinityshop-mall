@@ -6,7 +6,7 @@ import Informacoes from "../shared/Informacoes"
 const Container = styled.div`
     border-radius: 4px;
     width: 570px;
-    height: 100%;
+    height: 600px;
     position: relative;
     background-color: #0D0D0D;
 `

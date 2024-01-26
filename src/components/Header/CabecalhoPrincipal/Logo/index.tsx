@@ -6,15 +6,19 @@ const LogoLink = styled.a`
     h1 {
         font-family: 'Inter';
         font-size: 1.5rem;
-        color: #000;
         font-weight: 700;
+        color: #000;
         margin: 0;
     }
 `
 
-const Logo = () => {
+interface PropsLogo {
+    style?: React.CSSProperties
+}
+
+const Logo = ({style}: PropsLogo) => {
     return (
-        <LogoLink target="_blank" href="#"><h1>InifnityShop Mall</h1></LogoLink>
+        <LogoLink target="_blank" href="#"><h1 style={style}>InifnityShop Mall</h1></LogoLink>
     )
 }
 

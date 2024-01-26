@@ -8,7 +8,7 @@ import ProdutoMenor from "./ProdutoMenor"
 
 const Container = styled.div`
     width: 100%;
-    height: 600px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     background-color: #FFF;
