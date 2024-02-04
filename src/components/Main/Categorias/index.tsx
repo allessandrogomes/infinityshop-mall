@@ -7,18 +7,27 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `
 
 const categorias: string[] = [
-    'Womans Fashion',
-    'Mens Fashion',
-    'Electronics',
-    'Home & Lifestyle',
-    'Medicine',
-    'Sports & Outdoor',
-    'Babys & Toys',
-    'Groceries & Pets',
-    'Health & Beauty'
+    "Smartphones",
+    "Laptops",
+    "Fragrances",
+    "Skincare",
+    "Groceries",
+    "Home Decoration",
+    "Furniture",
+    "Tops",
+    "Womens",
+    "Mens",
+    "Sunglasses",
+    "Automotive",
+    "Motorcycle",
+    "Lighting"
 ]
 
 const Categorias = () => {

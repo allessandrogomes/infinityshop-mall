@@ -29,7 +29,7 @@ const CampoDePesquisa = () => {
     return (
         <Container>
             <InputPesquisa placeholder="What are you looking for?"></InputPesquisa>
-            <SearchIcon sx={{color: '#000', cursor: 'pointer'}}/>
+            <SearchIcon sx={{ color: '#000', cursor: 'pointer' }} />
         </Container>
     )
 }

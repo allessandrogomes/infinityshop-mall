@@ -5,10 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -27,7 +23,6 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
 
 export default function DrawerAppBar(props: Props) {
     const { window } = props;
@@ -38,20 +33,21 @@ export default function DrawerAppBar(props: Props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                MUI
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Typography variant="h6" sx={{ my: 4 }}>
+                <Logo />
             </Typography>
             <Divider />
-            <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+                <NavLink itemLink='Home' />
+                <NavLink itemLink='Contact' />
+                <NavLink itemLink='About' />
+                <NavLink itemLink='Sign Up' />
+            </div>
+            <Box sx={{ display: { xs: 'flex', sm: 'none' }, flexDirection: 'column', marginTop: '30px', gap: '10px' }}>
+                    <IconeFavoritos />
+                    <ItemCarrinho />
+            </Box>
         </Box>
     );
 
@@ -67,18 +63,18 @@ export default function DrawerAppBar(props: Props) {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{ mr: 2, display: { lg: 'none' }, backgroundColor: '#000' }}
                     >
                         <MenuIcon />
                     </IconButton>
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                        sx={{ display: { xs: 'none', md: 'block' } }}
                     >
                         <Logo />
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
                         <div style={{ display: 'flex', gap: '48px' }}>
                             <NavLink itemLink='Home' />
                             <NavLink itemLink='Contact' />
@@ -87,10 +83,10 @@ export default function DrawerAppBar(props: Props) {
                         </div>
                     </Box>
                     <CampoDePesquisa />
-                    <div style={{display: 'flex', gap: '20px'}}>
-                        <IconeFavoritos />
-                        <ItemCarrinho />
-                    </div>
+                    <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: '10px' }}>
+                            <IconeFavoritos />
+                            <ItemCarrinho />
+                    </Box>
                 </Toolbar>
             </AppBar>
             <nav>
@@ -100,10 +96,10 @@ export default function DrawerAppBar(props: Props) {
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true,
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', lg: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >

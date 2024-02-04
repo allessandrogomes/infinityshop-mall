@@ -5,17 +5,29 @@ import SelecionarIdioma from "./SelecionarIdioma"
 
 const Container = styled.div`
     display: flex;
-    width: 100%;
-    height: 48px;
+    width: 100vw;
+    min-height: 48px;
     background-color: #000;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+        justify-content: center;
+        padding: 15px 15px;
+        flex-direction: column;
+        height: 100%;
+    }
 `
 
 const DivOferta = styled.div`
-    width: max-content;
+    max-width: 551px;
     display: flex;
     gap: 2px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 const CabecalhoTopo = () => {

@@ -8,7 +8,12 @@ const Select = styled.select`
     font-weight: 400;
     font-size: 0.875rem;
     position: absolute;
-    left: 85vw;
+    right: 30px;
+
+    @media screen and (max-width: 1024px) {
+        position: relative;
+        right: 0;
+    }
 ` 
 
 const SelecionarIdioma = () => {

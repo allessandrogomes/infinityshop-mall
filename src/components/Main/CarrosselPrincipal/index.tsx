@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import ImagemCarrossel from './ImagemCarrossel';
+import styled from 'styled-components';
 
 function CarrosselPrincipal() {
     const [index, setIndex] = useState(0);
@@ -9,18 +10,29 @@ function CarrosselPrincipal() {
         setIndex(selectedIndex);
     };
 
+    const Div = styled.div`
+        width: 56%;
+        margin-top: 40px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+    `
+
     return (
-        <Carousel style={{width: '56%', marginTop: '40px'}} activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
-            <ImagemCarrossel imagem='/images/carrossel-imagem-1.svg'/>
-            </Carousel.Item>
-            <Carousel.Item>
-            <ImagemCarrossel imagem='/images/carrossel-imagem-2.png'/>
-            </Carousel.Item>
-            <Carousel.Item>
-            <ImagemCarrossel imagem='/images/carrossel-imagem-3.jpg'/>
-            </Carousel.Item>
-        </Carousel>
+        <Div>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+                <Carousel.Item>
+                    <ImagemCarrossel imagem='/images/carrossel-imagem-1.svg' />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <ImagemCarrossel imagem='/images/carrossel-imagem-2.png' />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <ImagemCarrossel imagem='/images/carrossel-imagem-3.jpg' />
+                </Carousel.Item>
+            </Carousel>
+        </Div>
     );
 }
 
