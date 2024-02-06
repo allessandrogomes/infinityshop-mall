@@ -1,0 +1,71 @@
+[
+    {
+        "nome": "Smartphones",
+        "imagem": "/images/categories/smartphone.png"
+    },
+
+    {
+        "nome": "Laptops",
+        "imagem": "/images/categories/laptop.png"
+    },
+
+    {
+        "nome": "Fragances",
+        "imagem": "/images/categories/fragance.png"
+    },
+
+    {
+        "nome": "Skincares",
+        "imagem": "/images/categories/skincare.png"
+    },
+
+    {
+        "nome": "Groceries",
+        "imagem": "/images/categories/groceries.png"
+    },
+
+    {
+        "nome": "Decorations",
+        "imagem": "/images/categories/home-decoration.png"
+    },
+
+    {
+        "nome": "Furnitures",
+        "imagem": "/images/categories/furniture.png"
+    },
+
+    {
+        "nome": "Tops",
+        "imagem": "/images/categories/top.png"
+    },
+
+    {
+        "nome": "Woman Dress",
+        "imagem": "/images/categories/woman-dress.png"
+    },
+
+    {
+        "nome": "Mens",
+        "imagem": "/images/categories/mens.png"
+    },
+
+    {
+        "nome": "Sunglasses",
+        "imagem": "/images/categories/sunglass.png"
+    },
+
+    {
+        "nome": "Automotive",
+        "imagem": "/images/categories/automotive.png"
+    },
+
+    {
+        "nome": "Motorcycle",
+        "imagem": "/images/categories/motorcycle.png"
+    },
+
+    {
+        "nome": "Lighting",
+        "imagem": "/images/categories/lighting.png"
+    }   
+]

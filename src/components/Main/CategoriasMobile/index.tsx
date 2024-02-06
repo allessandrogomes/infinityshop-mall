@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css/free-mode';
 import styled from "styled-components";
 import IconeCategoria from "./IconeCategoria";
+import CategoriasProdutos from '../../../../public/data/categorias-produtos.json'
 
 const Div = styled.div`
     width: 95vw;
@@ -11,6 +12,13 @@ const Div = styled.div`
         display: none;
     }
 `
+
+interface CategoriaProduto {
+    nome: string
+    imagem: string
+}
+
+const categorias: CategoriaProduto[] = CategoriasProdutos
 
 const CategoriasMobile = () => {
     return (
@@ -42,61 +50,11 @@ const CategoriasMobile = () => {
                     }
                 }}
             >
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/smartphone.png" nomeCategoria="Smartphones"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/laptop.png" nomeCategoria="Laptops"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/fragance.png" nomeCategoria="Fragances"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/skincare.png" nomeCategoria="Skincares"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/groceries.png" nomeCategoria="Groceries"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/home-decoration.png" nomeCategoria="Decorations"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/furniture.png" nomeCategoria="Furnitures"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/top.png" nomeCategoria="Tops"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/woman-dress.png" nomeCategoria="Woman Dress"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/mens.png" nomeCategoria="Mens"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/sunglass.png" nomeCategoria="Sunglasses"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/automotive.png" nomeCategoria="Automotive"/>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/motorcycle.png" nomeCategoria="Motorcycle"/>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <IconeCategoria imagem="/images/categories/lighting.png" nomeCategoria="Lighting"/>
-                </SwiperSlide>
+                {categorias.map((categoria, index) => (
+                    <SwiperSlide key={index}>
+                        <IconeCategoria imagem={categoria.imagem} nomeCategoria={categoria.nome} />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </Div>
     )

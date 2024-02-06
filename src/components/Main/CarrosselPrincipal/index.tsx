@@ -3,21 +3,23 @@ import Carousel from 'react-bootstrap/Carousel';
 import ImagemCarrossel from './ImagemCarrossel';
 import styled from 'styled-components';
 
+const Div = styled.div`
+        width: 56%;
+        height: 500px;
+        margin-top: 40px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 344px;
+        }
+    `
+
 function CarrosselPrincipal() {
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex: any) => {
         setIndex(selectedIndex);
     };
-
-    const Div = styled.div`
-        width: 56%;
-        margin-top: 40px;
-
-        @media screen and (max-width: 768px) {
-            width: 100%;
-        }
-    `
 
     return (
         <Div>

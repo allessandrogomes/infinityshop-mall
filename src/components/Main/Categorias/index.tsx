@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import ItemCategoria from "./ItemCategoria"
+import CategoriasProdutos from '../../../../public/data/categorias-produtos.json'
 
 const Container = styled.div`
     margin-top: 40px;
@@ -13,29 +14,18 @@ const Container = styled.div`
     }
 `
 
-const categorias: string[] = [
-    "Smartphones",
-    "Laptops",
-    "Fragrances",
-    "Skincare",
-    "Groceries",
-    "Home Decoration",
-    "Furniture",
-    "Tops",
-    "Womens",
-    "Mens",
-    "Sunglasses",
-    "Automotive",
-    "Motorcycle",
-    "Lighting"
-]
+interface CategoriaProduto {
+    nome: string
+}
+
+const categorias: CategoriaProduto[] = CategoriasProdutos
 
 const Categorias = () => {
     return (
         <Container>
-            {categorias.map(categoria => {
-                return <ItemCategoria categoria={categoria} key={categoria}/>
-            })}
+            {categorias.map((categoria, index) => (
+                <ItemCategoria categoria={categoria.nome} key={index}/>
+            ))}
         </Container>
     )
 }
