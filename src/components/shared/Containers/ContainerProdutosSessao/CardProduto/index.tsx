@@ -31,6 +31,10 @@ const Card = styled.div`
             opacity: 1;
         }
     }
+
+    @media screen and (max-width: 375px) {
+        width: 256px;
+    }
 `
 
 const BlocoImagem = styled.div`

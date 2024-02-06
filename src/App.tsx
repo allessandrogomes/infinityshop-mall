@@ -29,6 +29,7 @@ import DownloadApp from './components/Footer/DownloadApp';
 import ContainerItems from './components/Footer/ContainerItems';
 import CategoriasMobile from './components/Main/CategoriasMobile';
 import 'swiper/css';
+import 'swiper/css/bundle';
 
 const ContainerApp = styled.div`
   width: 100vw;
@@ -68,8 +69,8 @@ function App() {
           <Divider sx={{ backgroundColor: '#000', opacity: '0.15', marginRight: '50px' }} orientation='vertical' flexItem />
           <CarroselPrincipal />
         </SessaoCategoriasECarrosel>
-        {/* <SessaoToday />
-        <SessaoCategories />
+        <SessaoToday />
+        {/* <SessaoCategories />
         <SessaoThisMonth />
         <BannerDestaque nomeProduto='JBL' descricaoProduto='Enhance Your Music Experience' imagemProduto='/images/produtos/jbl.svg' />
         <SessaoOurProducts />

@@ -7,7 +7,6 @@ import CategoriasProdutos from '../../../../public/data/categorias-produtos.json
 const Div = styled.div`
     width: 95vw;
     margin-top: 25px;
-
     @media screen and (min-width: 769px) {
         display: none;
     }
@@ -24,10 +23,7 @@ const CategoriasMobile = () => {
     return (
         <Div>
             <Swiper
-                freeMode={true}
-                navigation
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 3000 }}
+                spaceBetween={10}
                 breakpoints={{
                     320: {
                         slidesPerView: 3

@@ -4,14 +4,15 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 const Div = styled.div`
     display: flex;
-    gap: 5px;
+    gap: 10px;
+    position: initial;
 `
 
 const SetasSessao = () => {
     return (
         <Div>
-            <ArrowCircleLeftIcon fontSize="large" sx={{ cursor: 'pointer' }} />
-            <ArrowCircleRightIcon fontSize="large" sx={{ cursor: 'pointer' }} />
+            <ArrowCircleLeftIcon style={{ position: 'initial', fill: 'initial' }} className="swiper-button-prev flash-sales" fontSize="large" sx={{ cursor: 'pointer' }} />
+            <ArrowCircleRightIcon style={{ position: 'initial', fill: 'initial' }} className="swiper-button-next flash-sales" fontSize="large" sx={{ cursor: 'pointer' }} />
         </Div>
     )
 }

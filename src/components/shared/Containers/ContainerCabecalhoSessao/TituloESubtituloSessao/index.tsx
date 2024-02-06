@@ -33,6 +33,10 @@ const Container = styled.div`
         letter-spacing: 1.44px;
         margin: 0;
         width: max-content;
+
+        @media screen and (max-width: 768px) {
+            font-size: 1.75rem;
+        }
     }
 `
 
