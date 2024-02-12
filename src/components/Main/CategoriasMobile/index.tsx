@@ -1,8 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react"
-import 'swiper/css/free-mode';
+import { Pagination, Autoplay } from 'swiper/modules';
+import SwiperCore from 'swiper'
+
 import styled from "styled-components";
 import IconeCategoria from "./IconeCategoria";
 import CategoriasProdutos from '../../../../public/data/categorias-produtos.json'
+
+SwiperCore.use([Pagination, Autoplay]);
 
 const Div = styled.div`
     width: 95vw;
@@ -23,7 +27,10 @@ const CategoriasMobile = () => {
     return (
         <Div>
             <Swiper
+            style={{ paddingBottom: '40px' }}
+                pagination={{ clickable: true, dynamicBullets: true }}
                 spaceBetween={10}
+                autoplay={{ delay: 3000 }}
                 breakpoints={{
                     320: {
                         slidesPerView: 3

@@ -32,7 +32,7 @@ const Container = styled.div`
         color: #000;
         letter-spacing: 1.44px;
         margin: 0;
-        width: max-content;
+        width: 100%;
 
         @media screen and (max-width: 768px) {
             font-size: 1.75rem;

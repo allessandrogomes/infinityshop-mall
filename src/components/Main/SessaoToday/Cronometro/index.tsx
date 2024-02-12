@@ -10,6 +10,11 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
     }
+
+    @media screen and (max-width: 768px) {
+        position: absolute;
+        top: 110px;
+    }
 `
 
 const TipoNumero = styled.span`

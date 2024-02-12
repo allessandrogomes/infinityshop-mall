@@ -10,7 +10,7 @@ const Btn = styled.button`
     font-weight: 500;
     font-family: 'Poppins';
     border: none;
-    margin: 50px auto 0 auto;
+    margin: 0px auto 0 auto;
 `
 
 interface BtnVerTodosProdutosProps {

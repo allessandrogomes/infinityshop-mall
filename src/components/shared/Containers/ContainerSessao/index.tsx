@@ -6,6 +6,7 @@ const Sessao = styled.section`
     flex-direction: column;
     width: 80vw;
     gap: 40px;
+    position: relative;
 `
 
 export default Sessao

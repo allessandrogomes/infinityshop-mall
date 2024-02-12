@@ -8,11 +8,25 @@ const Div = styled.div`
     position: initial;
 `
 
-const SetasSessao = () => {
+interface PropsSetasSessao {
+    nomeSessao: string
+}
+
+const SetasSessao = ({ nomeSessao }: PropsSetasSessao) => {
     return (
         <Div>
-            <ArrowCircleLeftIcon style={{ position: 'initial', fill: 'initial' }} className="swiper-button-prev flash-sales" fontSize="large" sx={{ cursor: 'pointer' }} />
-            <ArrowCircleRightIcon style={{ position: 'initial', fill: 'initial' }} className="swiper-button-next flash-sales" fontSize="large" sx={{ cursor: 'pointer' }} />
+            <ArrowCircleLeftIcon
+                style={{ position: 'initial', fill: 'initial' }}
+                className={`swiper-button-prev ${nomeSessao}`}
+                fontSize="large"
+                sx={{ cursor: 'pointer' }}
+            />
+            <ArrowCircleRightIcon
+                style={{ position: 'initial', fill: 'initial' }}
+                className={`swiper-button-next ${nomeSessao}`}
+                fontSize="large"
+                sx={{ cursor: 'pointer' }}
+            />
         </Div>
     )
 }

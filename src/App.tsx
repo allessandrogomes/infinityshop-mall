@@ -70,8 +70,8 @@ function App() {
           <CarroselPrincipal />
         </SessaoCategoriasECarrosel>
         <SessaoToday />
-        {/* <SessaoCategories />
-        <SessaoThisMonth />
+        <SessaoCategories />
+        {/* <SessaoThisMonth />
         <BannerDestaque nomeProduto='JBL' descricaoProduto='Enhance Your Music Experience' imagemProduto='/images/produtos/jbl.svg' />
         <SessaoOurProducts />
         <SessaoFeatured />
