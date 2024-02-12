@@ -12,7 +12,7 @@ const SessaoOurProducts = () => {
         <Sessao>
             <Cabecalho>
                 <TituloESubtituloSessao titulo="Our Products" subtitulo="Explore Our Products" />
-                <SetasSessao />
+                <SetasSessao nomeSessao="our-products"/>
             </Cabecalho>
             <Produtos>
                 <CardProduto
