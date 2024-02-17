@@ -71,9 +71,13 @@ function App() {
         </SessaoCategoriasECarrosel>
         <SessaoToday />
         <SessaoCategories />
-        {/* <SessaoThisMonth />
-        <BannerDestaque nomeProduto='JBL' descricaoProduto='Enhance Your Music Experience' imagemProduto='/images/produtos/jbl.svg' />
-        <SessaoOurProducts />
+        <SessaoThisMonth />
+        <BannerDestaque 
+          nomeProduto='JBL' 
+          descricaoProduto='Enhance Your Music Experience' 
+          imagemProduto='/images/produtos/jbl.svg' 
+        />
+        {/* <SessaoOurProducts />
         <SessaoFeatured />
         <SessaoVantagens /> */}
       </Main>

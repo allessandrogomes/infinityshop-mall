@@ -7,6 +7,11 @@ const Sessao = styled.section`
     width: 80vw;
     gap: 40px;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        width: 100vw;
+        padding: 0 20px;
+    }
 `
 
 export default Sessao

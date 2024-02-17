@@ -5,6 +5,7 @@ const Produtos = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 40px;
 `
 
 export default Produtos

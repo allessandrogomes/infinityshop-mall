@@ -1,15 +1,32 @@
 import styled from "styled-components"
-import Sessao from "../../shared/Containers/ContainerSessao"
+
+const Sessao = styled.section`
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    gap: 40px;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        width: 100vw;
+    }
+`
 
 const Banner = styled.div`
     background-color: #000;
-    width: 80vw;
+    width: 100%;
     font-family: 'Poppins';
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 56px;
+    height: 500px;
     gap: 10px;
+    padding: 50px;
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+        flex-direction: column;
+    }
 `
 
 const DivInformacoes = styled.div`
@@ -17,18 +34,25 @@ const DivInformacoes = styled.div`
     flex-direction: column;
     gap: 32px;
     width: 50%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 `
 
 const Titulo = styled.span`
     color: #0F6;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 600;
     width: max-content;
 `
 
 const Subtitulo = styled.span`
     font-family: 'Inter';
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
     line-height: 60px;
     letter-spacing: 1.92px;
@@ -39,6 +63,10 @@ const DivContagem = styled.div`
     display: flex;
     gap: 24px;
     width: max-content;
+
+    @media screen and (max-width: 768px) {
+        
+    }
 `
 
 const ItemContagem = styled.div`
@@ -53,6 +81,12 @@ const ItemContagem = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        width: 57px;
+        height: 57px;
+        font-size: 0.75rem;
+    }
 `
 
 const TextoItemContagem = styled.span`
@@ -83,6 +117,10 @@ const DivImagem = styled.div`
         position: absolute;
         width: 100%;
         height: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 `
 
