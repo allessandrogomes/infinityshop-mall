@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import Cabecalho from "../../shared/Containers/ContainerCabecalhoSessao"
 import TituloESubtituloSessao from "../../shared/Containers/ContainerCabecalhoSessao/TituloESubtituloSessao"
-import Sessao from "../../shared/Containers/ContainerSessao"
 import ProdutoPrincipal from "./ProdutoPrincipal"
 import ProdutoSecundario from "./ProdutoSecundario"
 import ProdutoMenor from "./ProdutoMenor"
+import Sessao from "../../shared/Containers/ContainerSessao"
 
 const Container = styled.div`
     width: 100%;
@@ -25,6 +25,10 @@ const DivOutrosProdutos = styled.div`
     height: 100%;
     gap: 30px;
     justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 const DivProdutosMenores = styled.div`
@@ -32,6 +36,10 @@ const DivProdutosMenores = styled.div`
     width: 100%;
     height: 284px;
     gap: 30px;
+
+    @media screen and (max-width: 768px) {
+        justify-content: space-around;
+    }
 `
 
 const SessaoFeatured = () => {

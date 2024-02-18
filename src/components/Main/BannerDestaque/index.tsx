@@ -19,7 +19,7 @@ const Banner = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: 100%;
     gap: 10px;
     padding: 50px;
 
@@ -124,6 +124,15 @@ const DivImagem = styled.div`
     }
 `
 
+const ImagemProdutoMobile = styled.img`
+    width: 150px;
+    height: 150px;
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+`
+
 export const EfeitoFundoImagem = styled.div`
     width: 100%;
     height: 100%;
@@ -146,6 +155,7 @@ const BannerDestaque = ({ nomeProduto, descricaoProduto, imagemProduto }: Banner
             <Banner>
                 <DivInformacoes>
                     <Titulo>{nomeProduto}</Titulo>
+                    <ImagemProdutoMobile src={imagemProduto} />
                     <Subtitulo>{descricaoProduto}</Subtitulo>
                     <DivContagem>
                         <ItemContagem>

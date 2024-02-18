@@ -9,6 +9,11 @@ const Container = styled.div`
     height: 600px;
     position: relative;
     background-color: #0D0D0D;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        border-radius: 0;
+    }
 `
 
 const DivImagem = styled.div`
@@ -17,6 +22,13 @@ const DivImagem = styled.div`
     height: 511px;
     bottom: 0px;
     left: 30px;
+
+    @media screen and (max-width: 768px) {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
 `
 
 

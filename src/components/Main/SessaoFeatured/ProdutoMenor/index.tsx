@@ -4,6 +4,7 @@ import { PropsInformacoes } from "../shared/interfaces"
 import Informacoes from "../shared/Informacoes"
 
 const Container = styled.div`
+    border-radius: 4px;
     width: 270px;
     height: 284px;
     position: relative;
@@ -25,6 +26,16 @@ const DivImagem = styled.div`
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    @media screen and (max-width: 768px) {   
+        width: 87px;
+        height: 87px;
+        bottom: 170px;
+
+        div {
+            filter: blur(50px);
+        }
     }
 `
 

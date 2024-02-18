@@ -4,6 +4,7 @@ import Informacoes from "../shared/Informacoes"
 import { PropsInformacoes } from "../shared/interfaces"
 
 const Container = styled.div`
+    border-radius: 4px;
     position: relative;
     width: 100%;
     height: 284px;
@@ -26,6 +27,17 @@ const DivImagem = styled.div`
         height: 100%;
         object-fit: contain;
     }
+
+    @media screen and (max-width: 425px) {
+        width: 180px;
+        height: 180px;
+
+        img {
+            position: relative;
+            left: 30px;
+            bottom: 133px;
+        }
+    }
 `
 
 const ProdutoSecundario = ({ imagem, titulo, subtitulo }: PropsInformacoes) => {
@@ -35,7 +47,7 @@ const ProdutoSecundario = ({ imagem, titulo, subtitulo }: PropsInformacoes) => {
                 <EfeitoFundoImagem />
                 <img src={imagem} />
             </DivImagem>
-            <Informacoes titulo={titulo} subtitulo={subtitulo}/>
+            <Informacoes titulo={titulo} subtitulo={subtitulo} />
         </Container>
     )
 }

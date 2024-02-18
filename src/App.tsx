@@ -77,11 +77,11 @@ function App() {
           descricaoProduto='Enhance Your Music Experience' 
           imagemProduto='/images/produtos/jbl.svg' 
         />
-        {/* <SessaoOurProducts />
+        <SessaoOurProducts />
         <SessaoFeatured />
-        <SessaoVantagens /> */}
+        <SessaoVantagens />
       </Main>
-      {/* <Footer>
+      <Footer>
         <ContainerItems>
           <Subscribe />
           <Support />
@@ -89,7 +89,7 @@ function App() {
           <QuickLink />
           <DownloadApp />
         </ContainerItems>
-      </Footer> */}
+      </Footer>
     </ContainerApp>
   )
 }
